@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+<script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+<!-- <script src="cordova.js"></script> -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ionic-ajax-interceptor/dist/ionic-ajax-interceptor.min.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+</head>
+<body ng-app="ravi">
+
+<ion-pane ng-controller="AppCtrl">
+    <ion-header-bar class="bar-balanced" align-title="center">
+        <h1 class="title">Ravi Checker</h1>
+    </ion-header-bar>
+    <ion-content class="padding">
+        <div class="row padding-vertical">
+            <input id="text_code" class="col col-center" type="text" placeholder="Enter a product code" ng-model="$parent.code">
+        </div>
+        <div class="row padding-vertical">
+            <div class="col col-offset-20 col-40 col-center center">
+                OR
+            </div>
+        </div>
+        <div class="row padding-vertical">
+            <div class="col col-center">
+                <button class="button button-block button-positive" ng-click="scan()">Scan QR Code</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="button button-calm button-balanced center" ng-click="checkOnline()">
+                    Check Online
+                </button>
+            </div>
+
+            <!--<div class="col col-50">-->
+                <!--<button class=" button button-calm button-assertive center" ng-click="checkSms()">-->
+                    <!--Check By SMS-->
+                <!--</button>-->
+
+            <!--</div>-->
+        </div>
+
+    </ion-content>
+    <div class="bar bar-footer bar-light">
+        <a class="button button-clear button-positive center">Sign in</a>
+    </div>
+</ion-pane>
+</body>
+</html>

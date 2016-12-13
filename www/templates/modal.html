@@ -1,0 +1,97 @@
+<ion-modal-view>
+    <ion-header-bar class="bar bar-header bar-positive" align-title="center">
+        <h1 class="title">Product's Information</h1>
+        <button class="button button-outline button-stable" ng-click="close()">Close</button>
+    </ion-header-bar>
+    <ion-content class="has-header">
+        <div class="padding">
+            <div class="list">
+                <div ng-if="component==0">
+                    <div class="item item-divider item-balanced">Product</div>
+                    <label class="item item-input">
+                        <span class="input-label">Name:</span>
+                        <input type="text" ng-model="$parent.info.product.name" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Description:</span>
+                        <input type="text" ng-model="$parent.info.product.description" readonly>
+                    </label>
+                </div>
+                <div ng-if="component==1">
+                    <div class="item item-divider item-balanced">Manufacturer</div>
+                    <label class="item item-input">
+                        <span class="input-label">Name:</span>
+                        <input type="text" ng-model="$parent.info.manufacturer.name" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Address:</span>
+                        <input type="text" ng-model="$parent.info.manufacturer.address" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Website:</span>
+                        <input type="text" ng-model="$parent.info.manufacturer.website" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Support:</span>
+                        <input type="text" ng-model="$parent.info.manufacturer.support_phone" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Email:</span>
+                        <input type="text" ng-model="$parent.info.manufacturer.email" readonly>
+                    </label>
+                </div>
+
+                <div ng-if="component==2">
+                    <div class="item item-divider item-balanced">Plot</div>
+                    <label class="item item-input">
+                        <span class="input-label">Name:</span>
+                        <input type="text" ng-model="$parent.info.plot.name" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Code:</span>
+                        <input type="text" ng-model="$parent.info.plot.code" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Description:</span>
+                        <input type="text" ng-model="$parent.info.manufacturer.description" readonly>
+                    </label>
+                </div>
+
+                <div ng-if="component==3">
+                    <div class="item item-divider item-balanced">Distribution</div>
+                    <label class="item item-input">
+                        <span class="input-label">Name:</span>
+                        <input type="text" ng-model="$parent.info.distribution.name" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Address:</span>
+                        <input type="text" ng-model="$parent.info.distribution.address" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Description:</span>
+                        <input type="text" ng-model="$parent.info.distribution.description" readonly>
+                    </label>
+                </div>
+                <div ng-if="component==4">
+                    <div class="item item-divider item-balanced">Package</div>
+                    <label class="item item-input">
+                        <span class="input-label">Type:</span>
+                        <input type="text" ng-model="$parent.info.package_size.name" readonly>
+                    </label>
+                    <label class="item item-input">
+                        <span class="input-label">Description:</span>
+                        <input type="text" ng-model="$parent.info.distribution.description" readonly>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <div class="bar bar-footer bar-clear">
+        <button class="button button-clear button-positive" ng-click="previousComponent()">
+            <i class="icon ion-chevron-left"></i> Previous
+        </button>
+        <button class="button button-clear button-positive" ng-click="nextComponent()">
+            Next <i class="icon ion-chevron-right"></i>
+        </button>
+    </div>
+</ion-modal-view>
